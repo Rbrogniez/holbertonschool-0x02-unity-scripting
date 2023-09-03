@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7877372565360682027}
   - component: {fileID: 4525126836119593144}
   - component: {fileID: 2536970282460500790}
-  - component: {fileID: 1621757513631525525}
+  - component: {fileID: 6085811838903777839}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Pickup
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1621757513631525525
-BoxCollider:
+--- !u!136 &6085811838903777839
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,6 +102,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.0000004, y: 2.0000005, z: 1.0000002}
+  serializedVersion: 2
+  m_Radius: 0.5000002
+  m_Height: 2.0000005
+  m_Direction: 1
   m_Center: {x: 0.00000005960466, y: 0, z: -0.00000008940697}
