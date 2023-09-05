@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     public float  forwardForce = 500f;
     public float sideForce = 500f;
+    private int score = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +37,26 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(0,0,-forwardForce * Time.deltaTime);
         }
 
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+         // Check if the entered collider has the "Pickup" tag.
+        if (other.CompareTag("Pickup"))
+        {
+            // Increment the score.
+            score++;
 
+            // Print the new score to the console.
+            Debug.Log("Score: " + score);
+
+            // Disable or destroy the Coin object.
+            // You can choose either option depending on your game logic.
+            // For disabling:
+            other.gameObject.SetActive(false);
+
+            // For destroying:
+            // Destroy(other.gameObject);
+        }
     }
 }
