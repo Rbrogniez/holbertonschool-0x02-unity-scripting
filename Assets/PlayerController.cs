@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float  forwardForce = 500f;
     public float sideForce = 500f;
     private int score = 0;
+    public int health = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,14 @@ public class PlayerController : MonoBehaviour
 
             // For destroying:
             // Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("Trap" ))
+        {
+            health--;
+
+            Debug.Log("Health: " + health);
+
         }
     }
 }
